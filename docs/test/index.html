@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <html>
 <head>
   <title>web app2</title>
@@ -8,7 +10,20 @@
 </head>
 <body>
 <h1>haha</h1>
-<a href="tel:10086">拨号</a> 
+<a id="dail"  href="tel:10086">拨号</a> 
 hello world
+<script>
+var dail = document.getElementById('dail')
+// dail.setAttribute('href', 'http://www.baidu.com')
+setTimeout(()=> {
+dail.innerHtml = "hahaha"
+dail.click()
+var evt = document.createEvent("MouseEvents");
+evt.initEvent("click", true, true);  
+// alert(2);
+// dail.dispatchEvent(evt);
+}, 1000)
+// dail.click()
+</script>
 </body>
 </html>
